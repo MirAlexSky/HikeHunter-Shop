@@ -1,0 +1,264 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline: 0;
+}
+
+body {
+	height: 100vh;
+	overflow: hidden;
+	z-index: 99;
+}
+
+.heading {
+	width: 100%;
+	height: calc(6.1em + 10px);
+	box-sizing: border-box;
+	background-image: url("../img/background.jpeg");
+	background-repeat: repeat;
+	color: rgb(255, 255, 255);
+	border-bottom: 3px solid rgb(110, 110, 110);
+	position: relative;
+}
+
+.ico {
+	float: left;
+	box-sizing: border-box;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin-left: 15px;
+}
+
+.ico img {
+	display: block;
+	height: 50%;
+}
+
+.heading .headcontainer {
+	width: min-content;
+	margin: auto;
+}
+
+.heading .headcontainer .title {
+	text-align: left;
+	font: 5em 'Oswald', sans-serif;
+}
+
+.heading .headcontainer .subtitle {
+	text-align: left;
+	font: 1.1em 'Roboto';
+	position: relative;
+	top: -10px;
+	padding-left: 5px;
+	color: #ffffffcb;
+}
+
+.content {
+	height: calc(100% - 6.1em - 10px);
+	background-image: 
+		linear-gradient(rgba(0, 0, 0, 0.507), 
+		rgba(0, 0, 0, 0.123)), url(../img/bg.jpeg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.slideradio {
+	display: none;
+}
+
+.mainNavigate {
+	width: 100%;
+	background-color: #ffffff3b;
+	display: flex;
+	justify-content: center;
+}
+
+
+.mainNavigate .navItem {
+	height: calc(100vh * 0.1);
+	width: calc(100vh * 0.1);
+	min-height: 25px;
+	min-width: 25px;
+	max-height: 80px;
+	max-width: 80px;
+	margin: 10px;
+	background-size: 70% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 1px solid rgb(143, 143, 143);
+	border-radius: 50%;
+	box-sizing: border-box;
+	position: relative;
+	color: transparent;
+	transition: background-color .2s, border .2s;
+	user-select: none;
+	cursor: pointer;
+}
+
+.mainNavigate .navItem:hover {
+	background-color: rgba(255, 255, 255, 0.514) !important;
+	background-image: none !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #3d3d3d;
+	font-size: 90%;
+	font-family: Roboto;
+}
+
+#navbackpack {
+	background-image: url(../img/backpackico.png);
+}
+#navtermos {
+	background-image: url(../img/termico.png);
+}
+#navtent {
+	background-image: url(../img/tentico.png);
+}
+#navspec {
+	background-image: url(../img/carabinico.png);
+}
+
+.slider-box {
+	width: 100%;
+	height: calc(100% - 100vh * 0.1 - 20px);
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	position: relative;
+	transition: opacity 1s;
+}
+
+.invisible {
+	opacity: 0;
+}
+
+.sliderBorder {
+	width: 60%;
+	height: 80%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.274);
+	outline: 1px solid rgb(192, 192, 192);
+}
+
+.slidecontainer {
+	height: 90%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider {
+	height: 100%;
+	width: 300%;
+	display: flex;
+	opacity: 0;
+	z-index: 1;
+	transition: transform 1s, width 1s, opacity 1s;
+	cursor: pointer;
+	position: absolute;
+}
+
+.slide {
+	height: inherit;
+	width: 100%;
+	text-align: center;
+}
+
+.slide img {
+	height: inherit;
+	max-width: 90%;
+	width: auto;
+	cursor: pointer;
+}
+
+.img-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-container_hidden {
+	display: none;
+}
+
+.slide_scaled {
+	display: block;
+	position: absolute;
+	height: 0;
+	z-index: 999;
+	transition: height .8s ;
+	border-left: 50vw rgba(0, 0, 0, 0.685) solid;
+	border-right: 50vw rgba(0, 0, 0, 0.685) solid;
+	border-bottom: 50vh rgba(0, 0, 0, 0.685) solid;
+	border-top: 50vh rgba(0, 0, 0, 0.685) solid;
+}
+
+#slidebtn1:checked ~ .slider-box #backpackSlider,
+#slidebtn2:checked ~ .slider-box #termosSlider,
+#slidebtn3:checked ~ .slider-box #tentSlider,
+#slidebtn4:checked ~ .slider-box #specSlider {
+	opacity: 1;
+	z-index: 100;
+}
+
+#slidebtn1:checked ~ .mainNavigate #navbackpack,
+#slidebtn2:checked ~ .mainNavigate #navtermos,
+#slidebtn3:checked ~ .mainNavigate #navtent,
+#slidebtn4:checked ~ .mainNavigate #navspec {
+	border: 4px rgba(255, 255, 255, 0.692) solid;
+	background-color: rgba(255, 255, 255, 0.185);
+}
+
+.controls {
+	width: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	top: calc(50% - 25px);
+	transition: width .6s;
+}
+
+.control {
+	width: 50px;
+	height: 50px;
+	margin: 0px 20px 0px 20px;
+	background-color: #555E79;
+	border-radius: 50%;
+	z-index: 101;
+	cursor: pointer;
+	border: 1px solid rgba(255, 255, 255, 0.719);
+}
+
+.hide {
+	display: none !important; 
+}
+
+.slide-nav-btns {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 10px;
+}
+
+.slide-nav-btn {
+	width: 25px;
+	height: 25px;
+	background-color: #555E79;
+	border: 1px solid rgba(255, 255, 255, 0.733);
+	border-radius: 50%;
+	margin: 0px 5px 0px 5px;
+	cursor: pointer;
+	z-index: 101;
+}	

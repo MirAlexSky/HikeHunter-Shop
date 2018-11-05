@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="font/Fjalla_One/FjallaOne-Regular.ttf">
+
+	<script src="js/jQuery.js"></script>
+
+	<title>HikePresent Главная страница</title>
+</head>
+
+<body>
+	<div class="heading">
+		<div  class="ico">
+				<img src="img/ico.png">
+		</div>
+		<div class="headcontainer">
+			<div class="title">HikeHunter</div>
+			<div class="subtitle">Туристический магазин спецтоваров</div>
+		</div>
+	</div>
+	<div class="content">
+		<input type="radio" class="slideradio" id="slidebtn1" name="slidebtn">
+		<input type="radio" class="slideradio" id="slidebtn2" name="slidebtn">
+		<input type="radio" class="slideradio" id="slidebtn3" name="slidebtn">
+		<input type="radio" class="slideradio" id="slidebtn4" name="slidebtn">
+		<nav class="mainNavigate">
+			<label for="slidebtn1" class="navItem" id="navbackpack">Рюкзаки</label>
+			<label for="slidebtn2" class="navItem" id="navtermos">Термосы</label>
+			<label for="slidebtn3" class="navItem" id="navtent">Палатки</label>
+			<label for="slidebtn4" class="navItem" id="navspec">Спец</label>
+		</nav>
+		<div class="slider-box invisible">
+			<div class="sliderBorder">
+				<div class="slidecontainer">
+					<div class="slider" id="backpackSlider">
+						<div class="slide"><img src="img/backpack-1.jpeg"></div>
+						<div class="slide"><img src="img/backpack-2.jpeg"></div>
+						<div class="slide"><img src="img/backpack-3.jpeg"></div>
+					</div>
+					<div class="slider" id="termosSlider">
+						<div class="slide"><img src="img/termos-1.jpeg"></div>
+						<div class="slide"><img src="img/termos-2.jpeg"></div>
+						<div class="slide"><img src="img/termos-3.jpeg"></div>
+					</div>
+					<div class="slider" id="tentSlider">
+						<div class="slide"><img src="img/tent-1.jpeg"></div>
+						<div class="slide"><img src="img/tent-2.jpeg"></div>
+						<div class="slide"><img src="img/tent-3.jpeg"></div>
+					</div>
+					<div class="slider" id="specSlider">
+						<div class="slide"><img src="img/spec_carabin.jpeg"></div>
+						<div class="slide"><img src="img/spec_ver.jpeg"></div>
+						<div class="slide"><img src="img/spec_knife.jpg"></div>
+					</div>
+				</div>
+				<div class="controls hide">
+					<div class="control" id="prevSlide"></div>
+					<div class="control" id="nextSlide"></div>
+				</div>
+				<div class="slide-nav-btns hide">
+					<div class="slide-nav-btn"></div>
+					<div class="slide-nav-btn"></div>
+					<div class="slide-nav-btn"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="img-container img-container_hidden"></div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
