@@ -21,20 +21,6 @@ body {
 	position: relative;
 }
 
-.ico {
-	float: left;
-	box-sizing: border-box;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	margin-left: 15px;
-}
-
-.ico img {
-	display: block;
-	height: 50%;
-}
-
 .heading .headcontainer {
 	width: min-content;
 	margin: auto;
